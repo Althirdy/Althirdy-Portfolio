@@ -8,7 +8,6 @@ export default function BlogPost() {
     const { slug } = useParams<{ slug: string }>();
     const navigate = useNavigate();
     const post = blogPosts.find((p) => p.slug === slug);
-    const otherPosts = blogPosts.filter((p) => p.slug !== slug);
 
     if (!post) {
         return (
